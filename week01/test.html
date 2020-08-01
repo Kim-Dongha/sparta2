@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <style> .jumbotron {
+                    width: 1000px;
+                    margin: auto;
+                        }
+
+            .box {
+            color: black;
+            width: 1000px;
+
+            margin: auto;
+
+
+            padding-top: 40px;
+
+　
+　
+
+
+        }
+        .box_area {
+            padding-top: 40px;
+            text-align: center;
+            border : 10px solid black;
+            border-radius: 10px;
+            margin: auto;
+        }
+    </style>
+    <script>
+
+        function hello() {   alert("안녕하세요")  }
+
+
+
+    </script>
+
+    </head>
+
+    <body>
+
+
+        <button onclick="hello()"> test </button>
+
+
+        <div class="jumbotron">
+
+            <h1>Hello, world!</h1>
+            <h6>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</h6>
+            <hr>
+             <h8> It uses utility classes for typography and spacing to space content out within the larger container. </h8>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+         </div>
+
+     <hr>
+
+    <div class="box">
+
+
+        <div class="box_area">
+            <div class="form-group">
+                <label>아티클 URL</label>
+                <input>
+              </div>
+                <br/>
+              <div >
+                <label>간단코멘트</label>
+                <textarea style="resize: none" style="size:"> </textarea>
+                  <br/>
+                  <button type="button" class="btn btn-primary">저장</button>
+        </div>
+
+
+
+      <br/>
+      <br/>
+
+
+
+
+
+
+    </div>
+
+     <hr>
+
+    <div class="row">
+
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+        <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+        <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="data:image/jpeg;base64,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" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+        <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+        <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+        <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="data:image/jpeg;base64,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" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdNCOQLLaqbpoesm-bJtQxhJBU0xqk5JHT-Q&usqp=CAU">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+        </html>
