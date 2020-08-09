@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="ko">
-
     <head>
         <!-- Webpage Title -->
         <title>모두의 책리뷰 | 스파르타코딩클럽</title>
-
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
-
         <!-- JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
                 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
                 crossorigin="anonymous"></script>
-
         <!-- 구글폰트 -->
         <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
-
         <script type="text/javascript">
-
             $(document).ready(function () {
                 $("#reviews-box").html("");
                 showReview();
             });
-
             function makeReview() {
-
-                let title=$('#title').val();
-                let author=$('#author').val();
-                let review=$('#bookReview').val();
-
-
+                alert("aaa")
+                let title = $('#title').val();
+                let author = $('#author').val();
+                let bookReview = $('#bookReview').val();
                 $.ajax({
                     type: "POST",
                     url: "/review",
-                    data: {'title_give':title,'author_give':author,'bookReview_give':bookReview,
-                    success: function (response) {
-                        if (response["result"] == "success") {
-                            alert(response["massage"]);
-                            window.location.reload();
+                    data: {'title_give': title, 'author_give': author, 'bookReview_give': bookReview},
+                        success: function (response) {
+                            if (response["result"] == "success") {
+                                alert(response["massage"]);
+                                window.location.reload();
+                            }
                         }
-                    }
                 })
             }
-
             function showReview() {
-
                 $.ajax({
                     type: "GET",
                     url: "/review",
@@ -65,7 +53,6 @@
                     }
                 })
             }
-
             function validateLength(obj) {
                 let content = $(obj).val();
                 if (content.length > 140) {
@@ -74,32 +61,26 @@
                 }
             }
         </script>
-
         <style type="text/css">
             * {
                 font-family: "Do Hyeon", sans-serif;
             }
-
             h1,
             h5 {
                 display: inline;
             }
-
             .info {
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
-
             .review {
                 text-align: center;
             }
-
             .reviews {
                 margin-top: 100px;
             }
         </style>
     </head>
-
     <body>
         <div class="container">
             <img src="https://previews.123rf.com/images/maxxyustas/maxxyustas1511/maxxyustas151100002/47858355-education-concept-books-and-textbooks-on-the-bookshelf-3d.jpg"
@@ -151,5 +132,4 @@
             </div>
         </div>
     </body>
-
 </html>
