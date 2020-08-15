@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>풀뗴기</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
 
         @font-face {
@@ -89,14 +90,19 @@
     </style>
 
     <script>
+        function test() {
+            alert("동물들이 기뻐하고있어요~")
+            $("input:checkbox[type='checkbox']").prop("checked", false);
+        }
+
+
 
 
     </script>
 
 
 </head>
-<body
-= bgcolor='#c2ff8b'>
+<body = bgcolor='#c2ff8b'>
 <!--   상단 타이틀     -->
 <div class="title" ><h1> 풀떼기와 고기 그 사이 어딘가 </h1></div>
 <br>
@@ -106,20 +112,21 @@
 <div class="map"><h3 class='map_text'>지도api가 올 자리</h3> <img src=""></div>
 <br>
 <br>
- <input id="search" type="image" src="images/button_search.png">
-<form>
-    <div class="btn-bundle" img src="C:\Users\gagas\Desktop\sparta\sparta\my_project\let'sVegun\static">
 
-        <div><input type="checkbox" class="checkbox_meat1" value="non-vegun" >  소고기 </input></div>
-        <div><input type="checkbox" class="checkbox_meat2" value="non-vegun"> 돼지고기 </input></div>
-        <div><input type="checkbox" class="checkbox_meat3" value="non-vegun"> 닭고기 </input></div>
-        <div><input type="checkbox" class="checkbox_meat4" value="non-vegun"> 오리고기 </input></div>
-        <div><input type="checkbox" class="checkbox_meat5" value="non-vegun"> 양고기 </input></div>
-        <div><input type="checkbox" class="checkbox_meat6" value="non-vegun"> 생선 </input></div>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div><button type="reset" class="btn"  onclick="alert('그린게이지가 올라가요')">
-            <Img class="btn_vegun" src="C:\Users\gagas\Desktop\sparta\sparta\my_project\let'sVegun\static\web_BTN.png">  ONLY-VEGUN </button></div>
-    </div>
+<form>
+    <div  class="btn-bundle" >
+        <div><input type="checkbox" class="checkbox_meat1" value="non-vegun" id="checkbox_meat1">  소고기 </input></div>
+        <div><input type="checkbox" class="checkbox_meat2" value="non-vegun" id="checkbox_meat2"> 돼지고기 </input></div>
+        <div><input type="checkbox" class="checkbox_meat3" value="non-vegun" id="checkbox_meat3"> 닭고기 </input></div>
+        <div><input type="checkbox" class="checkbox_meat4" value="non-vegun" id="checkbox_meat4"> 오리고기 </input></div>
+        <div><input type="checkbox" class="checkbox_meat5" value="non-vegun" id="checkbox_meat5"> 양고기 </input></div>
+        <div><input type="checkbox" class="checkbox_meat6" value="non-vegun" id="checkbox_meat6"> 생선 </input></div>
+        <img class="btn" src="{{ url_for('static', filename='web_BTN.png') }}" onclick="test()">
+        </div>
+
+
+
+<!--        <input type='reset' style="background-image: url('../static/web_BTN.png')">-->
 </form>
 
 
